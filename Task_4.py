@@ -7,8 +7,8 @@
 24 -> 4  16  4
 60 -> 10  40  10
 """
-Petro = Sergo = int(input())
-Katy = Petro*4
+Petro = Sergo = int(input('Введите значение: '))
+Katy = (Petro + Sergo)*2
 print(f'Количество журавликов, которые сделал Петя: {Petro}')
 print(f'Количество журавликов, которые сделал Серёжа: {Sergo}')
 print(f'Количество журавликов, которые сделалa Катя: {Katy}')
