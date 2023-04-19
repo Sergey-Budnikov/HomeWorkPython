@@ -8,7 +8,7 @@
 A = int(input('Введите число: '))
 prev = 0
 next = 1
-count = 1
+count = 2
 while next <= A :
     if next == A :
         print(f'{count}е число Фибоначчи')
