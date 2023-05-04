@@ -28,4 +28,20 @@ if countreshka < countorel:
 elif countreshka == countorel:
     print(f"Количество монет 'РЕШКА' и 'ОРЁЛ' равны, что хотите, то и переворачивайте")    
 else:
-    print(f"Нужно перевернуть {countorel} монет(ы) 'ОРЁЛ' на 'РЕШКА'")           
+    print(f"Нужно перевернуть {countorel} монет(ы) 'ОРЁЛ' на 'РЕШКА'") 
+    
+"""
+n = int(input()) 
+count_zero = 0
+count_one = 0
+for i in range(n):
+    x = int(input())
+    if x == 0:
+        count_zero += 1
+    else:
+        count_one += 1
+if count_one > count_zero:
+print(count_zero)
+else:
+print(count_one)
+"""              
