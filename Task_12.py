@@ -10,5 +10,14 @@ for X in range(1001):
     for Y in range(1001):
         if P == X*Y and S == X+Y:
             print(X,Y)
+            
+"""
+x = int(input())
+y = int(input())
+for i in range(x):
+for j in range(y):
+if x == i + j and y == i * j:
+print(i, j)
+"""            
 
               
