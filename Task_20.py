@@ -45,6 +45,21 @@ for i in slovo:
     for (key,value) in dictionary.items():
         if key == i:
             sum = sum + value
-print(sum)            
+print(sum)
 
-        
+# Второе решение.
+
+alphabet_en = {1:'AEIOULNSTR', 2:'DG', 3:'BCMP', 4:'FHVWY', 5:'K', 8:'JX', 10:'QZ'}
+alphabet_ru = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ', 4:'ЙЫ', 5:'ЖЗХЦЧ', 8:'ШЭЮ', 10:'ФЩЪ'}
+word = input().upper()
+count = 0
+for i in word:
+    if i in 'QWERTYUIOPASDFGHJKLZXCVBNM':
+        for j in alphabet_en:
+            if i in alphabet_en[j]:
+                count+= count + j
+    else:
+        for j in alphabet_ru:
+            if i in alphabet_ru[j]:
+                count+= count + j
+print(count)                    

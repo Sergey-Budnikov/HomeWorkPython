@@ -22,4 +22,14 @@ for i in range(1, n + 1):
     if N == 3:
         X+= 1
 print(A)        
-print(X)        
+print(X) 
+
+# Второе рещение
+
+n = int(input("Enter number: "))
+list_1 = list()
+for i in range(n):
+    x = int(input())
+    list_1.append(x)
+k = int(input())
+print(list_1.count(k))       
