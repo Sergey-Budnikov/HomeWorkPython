@@ -5,6 +5,8 @@
 Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
 элементов второго множества. Затем пользователь вводит сами элементы множеств.
 """
+#РЕШЕНИЕ №1
+
 n = {2,5,7,45,67,23,12,78,4,44,444,500,1001}
 m = {1,2,45,12,444,10,1001,500}
 c = n.intersection(m)
@@ -14,31 +16,35 @@ print(c)
 list.sort(c)
 print(c)
 
-# num = int(input('Enter: '))
-# n = set()
-# list1 = []
-# for i in range(num):
-#     num = input('Enter: ')
-#     list1.append(num) 
-# print(list1) 
-# n.update(list1)   
-# print(n)
+#РЕШЕНИЕ №2
 
-# num = int(input('Enter: '))
-# m = set()
-# list1 = []
-# for i in range(num):
-#     num = input('Enter: ')
-#     list1.append(num) 
-# print(list1) 
-# m.update(list1)   
-# print(m)
-# c = n.intersection(m)
-# print(c)
-# c = list(c)
-# print(c) 
-# list.sort(c)
-# print(c)
+num = int(input('Enter: '))
+n = set()
+list1 = []
+for i in range(num):
+    num = input('Enter: ')
+    list1.append(num) 
+print(list1) 
+n.update(list1)   
+print(n)
+
+num = int(input('Enter: '))
+m = set()
+list1 = []
+for i in range(num):
+    num = input('Enter: ')
+    list1.append(num) 
+print(list1) 
+m.update(list1)   
+print(m)
+c = n.intersection(m)
+print(c)
+c = list(c)
+print(c) 
+list.sort(c)
+print(c)
+
+#РЕШЕНИЕ №3
 
 def duplicate_numbers_in_the_list():
     first_len = int(input("Введите кол-во элементов первого множества: "))
@@ -62,3 +68,32 @@ def duplicate_numbers_in_the_list():
 
 
 print(duplicate_numbers_in_the_list())
+
+#Эталонное решение
+
+mol = [int(x) for x in input().split()]
+n = mol[0]
+m = mol[1]
+
+a = [int(x) for x in input().split()]
+k = set(a)
+
+b = [int(x) for x in input().split()]
+k1 = set(b)
+
+lok = k & k1
+kool = list(lok)
+kool.sort()
+for i in kool:
+    print(i, end=' ')
+    
+#Дополнительное решение
+
+n = [int(x) for x in input().split()]
+m = [int(x) for x in input().split()]
+spisok = []
+for i in n:
+    if i in m:
+        spisok.append(i)
+list.sort(spisok)
+print(spisok) 

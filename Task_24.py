@@ -33,4 +33,20 @@ while (i < kust):
         result.sort()
     i += 1
 
-print(f"Максимальное число ягод за одну итерацию {result[-1]}")
+print(f"Максимальное число ягод за одну итерацию: {result[-1]}")
+print(result)
+
+#Эталонное решение
+
+n = int(input("Количество кустов: "))
+arr = list()
+for i in range(n):
+    x = int(input(f"Количество ягод на {i + 1}м кусте: "))
+    arr.append(x)
+print(arr)
+arr_count = list()
+for i in range(len(arr) - 1):
+    arr_count.append(arr[i - 1] + arr[i] + arr[i + 1])
+#arr_count.append(arr[-2] + arr[-1] + arr[0]) не нужно, без else тоже работает
+print("Максимальное количество ягод за один проход: ")
+print(max(arr_count))      
